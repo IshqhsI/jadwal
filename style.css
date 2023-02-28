@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+thead {
+  font-size: 14px;
+}
+
+tbody {
+  font-size: 12px;
+}

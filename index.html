@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Jadwal Alert Matkul Cek Now-->
+    <div class="container-fluid px-0">
+      <div class="card w-100">
+        <!-- <img src="..." class="card-img-top" alt="..." /> -->
+        <h5 class="card-header">Jadwal Semester 6</h5>
+
+        <div class="card-body table-responsive">
+          <div class="dropdown my-3 d-inline">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Cek Jadwal
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#" id="now">Sekarang</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="today">Hari Ini</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="tomorrow">Besok</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="btn btn-success d-inline"
+            onclick="return location.reload()"
+          >
+            Reset
+          </button>
+          <table
+            class="table table-striped table-bordered table-hover mt-3"
+            id="tableJadwal"
+          >
+            <thead class="table-primary">
+              <tr>
+                <td>Hari</td>
+                <td>Jam</td>
+                <td>Mata Kuliah</td>
+                <td>Kelas</td>
+                <td>Dosen</td>
+                <td>Ruang</td>
+              </tr>
+            </thead>
+            <tbody class="">
+              <!-- Senin -->
+              <tr class="senin" id="senin">
+                <td>Senin</td>
+                <td>08.00 - 09.40</td>
+                <td>Rekayasa Perangkat Lunak</td>
+                <td>B</td>
+                <td>Johan Wahyudi</td>
+                <td>V</td>
+              </tr>
+              <tr class="senin" id="senin">
+                <td></td>
+                <td>09.40 - 11.20</td>
+                <td>Sistem Basis Data Spasial</td>
+                <td>A</td>
+                <td>Herman R</td>
+                <td>Lab IV</td>
+              </tr>
+              <tr class="senin" id="senin">
+                <td></td>
+                <td>13.40 - 15.20</td>
+                <td>Pemrograman Grafik</td>
+                <td>B</td>
+                <td>Husnul MJ</td>
+                <td>VI</td>
+              </tr>
+
+              <!-- Selasa -->
+              <tr class="selasa" id="selasa">
+                <td>Selasa</td>
+                <td>08.00 - 09.40</td>
+                <td>Rekayasa Perangkat Lunak</td>
+                <td>B</td>
+                <td>Johan Wahyudi</td>
+                <td>V</td>
+              </tr>
+              <tr class="selasa" id="selasa">
+                <td></td>
+                <td>09.40 - 11.20</td>
+                <td>Sistem Basis Data Spasial</td>
+                <td>A</td>
+                <td>Herman R</td>
+                <td>VI</td>
+              </tr>
+              <tr class="selasa" id="selasa">
+                <td></td>
+                <td>11.20 - 13.00</td>
+                <td>Jaringan Syaraf Buatan</td>
+                <td>B</td>
+                <td>Samsuri</td>
+                <td>Lab IV</td>
+              </tr>
+              <tr class="selasa" id="selasa">
+                <td></td>
+                <td>15.20 - 17.00</td>
+                <td>Desain Grafis</td>
+                <td>B</td>
+                <td>Feiliana Tan</td>
+                <td>Lab IV</td>
+              </tr>
+
+              <!-- Rabu -->
+              <tr class="rabu" id="rabu">
+                <td>Rabu</td>
+                <td>08.00 - 09.40</td>
+                <td>Jaringan Syaraf Buatan</td>
+                <td>B</td>
+                <td>Samsuri</td>
+                <td>VI</td>
+              </tr>
+              <tr class="rabu" id="rabu">
+                <td></td>
+                <td>09.40 - 11.20</td>
+                <td>Pendidikan Anti Korupsi</td>
+                <td>A</td>
+                <td>Seradi A</td>
+                <td>IV</td>
+              </tr>
+              <tr class="rabu" id="rabu">
+                <td></td>
+                <td>11.20 - 13.00</td>
+                <td>Desain Grafis</td>
+                <td>B</td>
+                <td>Feiliana Tan</td>
+                <td>V</td>
+              </tr>
+
+              <!-- Kamis -->
+              <tr class="kamis" id="kamis">
+                <td>Kamis</td>
+                <td>08.00 - 09.40</td>
+                <td>Pemrograman Grafik</td>
+                <td>B</td>
+                <td>Husnul MJ</td>
+                <td>Lab IV</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
