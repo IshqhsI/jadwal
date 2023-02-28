@@ -81,7 +81,7 @@ function cekJadwal(hari, day) {
     } else {
       let andau = day[0].toUpperCase() + day.substr(1);
 
-      const info = `Tidak ada jadwal di jam ini`;
+      const info = `Tidak ada jadwal sekarang!`;
 
       Swal.fire(andau, info, 'info');
     }
