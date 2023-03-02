@@ -19,8 +19,7 @@ $(document).ready(function () {
 });
 
 function cekSekarang(hari) {
-  // const days = ['ahad', 'senin', 'selasa', 'rabu', 'kamis', "jum'at", 'sabtu'];
-  const days = ['sabtu', 'ahad', 'senin', 'selasa', 'rabu', 'kamis', "jum'at"];
+  const days = ['ahad', 'senin', 'selasa', 'rabu', 'kamis', "jum'at", 'sabtu'];
   let day = days[hari];
 
   let harini = document.getElementsByClassName(days[hari]);
