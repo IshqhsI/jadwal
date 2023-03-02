@@ -51,9 +51,7 @@ function cekJadwal(hari, day) {
 
   for (i = 0; i < hari.length; i++) {
     let now = new Date();
-    now.setHours(16, 40);
 
-    // console.log(now, hari[i], now);
     let kolom = hari[i].getElementsByTagName('td')[1].innerHTML;
 
     let jam = kolom.slice(0, 2);
