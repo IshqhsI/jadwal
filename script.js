@@ -51,6 +51,7 @@ function cekJadwal(hari, day) {
 
   for (i = 0; i < hari.length; i++) {
     let now = new Date();
+    // now.setHours(9, 50);
 
     let kolom = hari[i].getElementsByTagName('td')[1].innerHTML;
 
@@ -63,8 +64,6 @@ function cekJadwal(hari, day) {
 
     const endTime = new Date();
     endTime.setHours(kolom.slice(8, 10), kolom.slice(11, 13));
-
-    let isi = '';
     let andau = day[0].toUpperCase() + day.substr(1);
 
     if (now >= startTime && now <= endTime) {
@@ -77,15 +76,15 @@ function cekJadwal(hari, day) {
       let dosen = row[4].innerHTML;
       let ruang = row[5].innerHTML;
 
-      const info = 1;
-      isi = `${jam} <br> ${matkul} (${kelas}) <br> ${dosen} <br> Ruang ${ruang}`;
+      alert = `${jam} <br> ${matkul} (${kelas}) <br> ${dosen} <br> Ruang ${ruang}`;
+      console.log();
       j = 10;
     } else {
       j = j + i;
     }
 
     if (j >= 10) {
-      Swal.fire(andau, isi, 'info');
+      Swal.fire(andau, alert, 'info');
     } else {
       Swal.fire(andau, 'Tidak ada Jadwal Sekarang', 'info');
     }
