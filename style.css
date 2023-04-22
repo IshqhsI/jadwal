@@ -1,12 +1,220 @@
-* {
-  margin: 0;
+@font-face {
+  font-family: dancing script;
+  src: url('Dancing_Script/static/DancingScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: rubik;
+  src: url('Rubik_Pixels/RubikPixels-Regular.ttf');
+}
+
+body {
   padding: 0;
+  margin: 0;
+  background: url('idulfitri.jpg');
+  background-size: 100%;
 }
 
-thead {
-  font-size: 14px;
+.box {
+  display: none;
 }
 
-tbody {
-  font-size: 12px;
+.box.active {
+  display: block;
+}
+
+.fade-in {
+  animation: fadeIn 1.8s;
+}
+
+.slide-in-left {
+  animation: slideInTop 1.8s;
+}
+
+.zoom-in {
+  animation: zoomIn 1.8s;
+}
+
+.rotate-in {
+  animation: rotateIn 1.8s;
+}
+
+.bounce-in {
+  animation: bounceIn 1.8s;
+}
+
+.flip-in {
+  animation: flipIn 1.8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(-90deg);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+
+.mine {
+  padding: 37.5vh 0;
+}
+
+/* Style untuk teks yang akan di animasikan */
+.animated-text {
+  margin: auto;
+}
+
+.animated-text h3 {
+  font-weight: bold;
+  font-family: dancing script, cursive;
+  text-align: center;
+  color: #f7f4f4;
+  font-size: 62px;
+}
+
+.animated-text span {
+  text-transform: uppercase;
+  display: block;
+  font-family: fantasy;
+  color: yellow;
+  margin: 0;
+  text-align: center;
+}
+
+.animated-text p {
+  font-size: 32px;
+  text-align: center;
+  margin: 0 auto;
+  color: rgb(4, 254, 196);
+  font-family: rubik;
+}
+.animated-text h6 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto;
+  color: rgb(4, 254, 196);
+  font-family: rubik;
+}
+/* Animasi teks */
+@keyframes animated-text {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mengatur durasi dan pengulangan animasi */
+.animated {
+  animation-name: animated-text;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background: url('hariraya.png');
+    background-repeat: no-repeat;
+    background-size: 100vh;
+  }
+
+  /* Style untuk teks yang akan di animasikan */
+  .animated-text {
+    margin: auto;
+  }
+
+  .animated-text h3 {
+    font-weight: bold;
+    font-family: dancing script, cursive;
+    text-align: center;
+    color: #f7f4f4;
+    font-size: 36px;
+  }
+
+  .animated-text span {
+    text-transform: uppercase;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    color: yellow;
+    margin: 0;
+  }
+
+  .animated-text p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(4, 254, 196);
+    font-family: rubik;
+  }
+  /* Animasi teks */
+  @keyframes animated-text {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mengatur durasi dan pengulangan animasi */
+  .animated {
+    animation-name: animated-text;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
 }
