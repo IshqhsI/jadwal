@@ -1,12 +1,4 @@
-@font-face {
-  font-family: dancing script;
-  src: url('Dancing_Script/static/DancingScript-Regular.ttf');
-}
-
-@font-face {
-  font-family: rubik;
-  src: url('Rubik_Pixels/RubikPixels-Regular.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Pixels&display=swap');
 
 body {
   padding: 0;
@@ -115,7 +107,7 @@ body {
 
 .animated-text h3 {
   font-weight: bold;
-  font-family: dancing script, cursive;
+  font-family: 'Dancing Script', cursive;
   text-align: center;
   color: #f7f4f4;
   font-size: 62px;
@@ -135,14 +127,14 @@ body {
   text-align: center;
   margin: 0 auto;
   color: rgb(4, 254, 196);
-  font-family: rubik;
+  font-family: 'Rubik Pixels';
 }
 .animated-text h6 {
   font-size: 24px;
   text-align: center;
   margin: 0 auto;
   color: rgb(4, 254, 196);
-  font-family: rubik;
+  font-family: 'Rubik Pixels';
 }
 /* Animasi teks */
 @keyframes animated-text {
@@ -177,7 +169,7 @@ body {
 
   .animated-text h3 {
     font-weight: bold;
-    font-family: dancing script, cursive;
+    font-family: 'Dancing Script', cursive;
     text-align: center;
     color: #f7f4f4;
     font-size: 36px;
@@ -197,7 +189,7 @@ body {
     text-align: center;
     margin: 0 auto;
     color: rgb(4, 254, 196);
-    font-family: rubik;
+    font-family: 'Rubik Pixels';
   }
   /* Animasi teks */
   @keyframes animated-text {
